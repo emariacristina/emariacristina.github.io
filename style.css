@@ -1,0 +1,113 @@
+/* Set */
+
+:root {
+  --rich-black-fogra-39: #060808;
+  --pantone: #212322;
+  --charcoal: #3C474D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Roboto;
+  font-weight: 400;
+}
+
+/* Header */
+
+header .logoContainer {
+  width: 100%;
+  padding: 1.6rem 2.4rem;
+
+  color: white;
+  background: var(--rich-black-fogra-39);
+  text-align: center;
+
+  font-size: 2.4rem;
+  font-family: Lora;
+  font-weight: 600;
+}
+
+.navigationMenuContainer {
+  padding: 1.6rem 2.4rem;
+
+  background: var(--pantone);
+  color: white;
+}
+
+.navigationMenuContainer ul {
+  height: 3.2rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  white-space: nowrap;
+  overflow-x: auto;
+
+  list-style: none;
+  font-weight: 400;
+}
+
+.navigationMenuContainer li + li {
+  margin-left: 1.6rem;
+}
+
+.navigationMenuContainer a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Content */
+
+.mainContent {
+  padding: 1.6rem 2.4rem;
+}
+
+.mainContent h1 {
+  color: var(--pantone);
+  font-family: Lora;
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+.mainContent p {
+  text-align: justify;
+  margin-bottom: .8rem;
+}
+
+.mainContent img {
+  width: 100%;
+
+  margin: 1.2rem 0;
+
+  border-radius: .8rem;
+  box-shadow: 0 0 .6rem var(--charcoal);
+}
+
+.locationContent {
+  padding: 1.6rem 2.4rem;
+
+}
+
+.locationTitle {
+  margin-bottom: 1.2rem;
+
+  font-family: Lora;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.locationContent span {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
