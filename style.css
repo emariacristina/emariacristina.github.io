@@ -119,3 +119,35 @@ header .logoContent {
     margin: auto;
   }
 }
+
+@media (min-width: 1000px) {
+  header {
+    background: var(--rich-black-fogra-39);
+  }
+
+  .logoContainer {
+    display: flex;
+    flex-direction: row;
+
+    width: 100rem;
+    margin: auto;
+
+    justify-content: space-between;
+  }
+
+  .logoContent {
+    max-width: fit-content;
+
+    background: none;
+
+    text-align: left;
+  }
+
+  .navigationMenuContent {
+    width: fit-content;
+
+    background: none;
+
+    text-align: right;
+  }
+}
