@@ -111,3 +111,11 @@ header .logoContainer {
   font-size: 1.6rem;
   font-weight: 600;
 }
+
+@media (min-width: 780px) {
+  .mainContainer {
+    max-width: 780px;
+    
+    margin: auto;
+  }
+}
