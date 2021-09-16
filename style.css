@@ -24,7 +24,7 @@ body {
 
 /* Header */
 
-header .logoContainer {
+header .logoContent {
   width: 100%;
   padding: 1.6rem 2.4rem;
 
@@ -37,14 +37,14 @@ header .logoContainer {
   font-weight: 600;
 }
 
-.navigationMenuContainer {
+.navigationMenuContent {
   padding: 1.6rem 2.4rem;
 
   background: var(--pantone);
   color: white;
 }
 
-.navigationMenuContainer ul {
+.navigationMenuContent ul {
   height: 3.2rem;
 
   display: flex;
@@ -58,11 +58,11 @@ header .logoContainer {
   font-weight: 400;
 }
 
-.navigationMenuContainer li + li {
+.navigationMenuContent li + li {
   margin-left: 1.6rem;
 }
 
-.navigationMenuContainer a {
+.navigationMenuContent a {
   text-decoration: none;
   color: white;
 }
@@ -110,4 +110,44 @@ header .logoContainer {
 .locationContent span {
   font-size: 1.6rem;
   font-weight: 600;
+}
+
+@media (min-width: 780px) {
+  .mainContainer {
+    max-width: 780px;
+    
+    margin: auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  header {
+    background: var(--rich-black-fogra-39);
+  }
+
+  .logoContainer {
+    display: flex;
+    flex-direction: row;
+
+    width: 100rem;
+    margin: auto;
+
+    justify-content: space-between;
+  }
+
+  .logoContent {
+    max-width: fit-content;
+
+    background: none;
+
+    text-align: left;
+  }
+
+  .navigationMenuContent {
+    width: fit-content;
+
+    background: none;
+
+    text-align: right;
+  }
 }
