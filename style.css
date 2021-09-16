@@ -24,7 +24,7 @@ body {
 
 /* Header */
 
-header .logoContainer {
+header .logoContent {
   width: 100%;
   padding: 1.6rem 2.4rem;
 
@@ -37,14 +37,14 @@ header .logoContainer {
   font-weight: 600;
 }
 
-.navigationMenuContainer {
+.navigationMenuContent {
   padding: 1.6rem 2.4rem;
 
   background: var(--pantone);
   color: white;
 }
 
-.navigationMenuContainer ul {
+.navigationMenuContent ul {
   height: 3.2rem;
 
   display: flex;
@@ -58,11 +58,11 @@ header .logoContainer {
   font-weight: 400;
 }
 
-.navigationMenuContainer li + li {
+.navigationMenuContent li + li {
   margin-left: 1.6rem;
 }
 
-.navigationMenuContainer a {
+.navigationMenuContent a {
   text-decoration: none;
   color: white;
 }
