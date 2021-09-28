@@ -4,6 +4,7 @@
   --rich-black-fogra-39: #060808;
   --pantone: #212322;
   --charcoal: #3C474D;
+  --yellow-green-color-wheel: #21B534;
 }
 
 * {
@@ -45,8 +46,6 @@ header .logoContent {
 }
 
 .navigationMenuContent ul {
-  height: 3.2rem;
-
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -65,6 +64,30 @@ header .logoContent {
 .navigationMenuContent a {
   text-decoration: none;
   color: white;
+}
+
+.navigationMenuContent .whatsapp {
+  display: flex;
+  flex-direction: row;
+
+  padding: .6rem 1.2rem;
+  align-items: center;
+
+  border-radius: .4rem;
+  background: var(--yellow-green-color-wheel);
+}
+
+.navigationMenuContent .whatsapp span {
+  margin-right: .6rem;
+}
+
+.whatsapp:hover {
+  background: #1ca02e;
+  cursor: default;
+}
+
+.whatsapp:active {
+  background: #1ca02e;
 }
 
 /* Content */
