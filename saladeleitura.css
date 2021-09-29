@@ -1,0 +1,14 @@
+.mainTitle {
+  margin-bottom: 1.2rem;
+}
+
+.sectionBooksHeader {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+.sectionBooksHeader h2 {
+  font-family: Lora;
+}
