@@ -38,6 +38,11 @@ header .logoContent {
   font-weight: 600;
 }
 
+.logoContent a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .navigationMenuContent {
   padding: 1.6rem 2.4rem;
 
@@ -164,11 +169,6 @@ header .logoContent {
     background: none;
 
     text-align: left;
-  }
-
-  .logoContent a {
-    color: inherit;
-    text-decoration: none;
   }
 
   .navigationMenuContent {
