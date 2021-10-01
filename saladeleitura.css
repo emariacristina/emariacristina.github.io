@@ -1,3 +1,8 @@
+:root {
+  --medium-purple: #9774CC;
+  --royal-purple: #7F54C0;
+}
+
 .mainTitle {
   margin-bottom: 1.2rem;
 }
@@ -31,6 +36,12 @@
   margin-left: 1.6rem;
 }
 
+.mainBookContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .mainBookHeader {
   margin: 0 0 .6rem 0;
 }
@@ -44,4 +55,25 @@
 .mainBookAuthor {
   font-size: 1.68rem;
   font-weight: 500;
+}
+
+.mainBookReadButton {
+  padding: .6rem;
+  margin: 1.2rem 0 0 0;
+
+  text-align: center;
+  text-decoration: none;
+
+  border-radius: .4rem;
+  color: white;
+  background: var(--medium-purple);
+}
+
+.mainBookReadButton:hover {
+  background: var(--royal-purple);
+  cursor: default;
+}
+
+.mainBookReadButton:active {
+  background: var(--royal-purple);
 }

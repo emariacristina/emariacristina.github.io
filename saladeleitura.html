@@ -52,11 +52,15 @@
           <img src="" alt="capa do livro em destaque">
 
           <div class="mainInfo">
-            <div class="mainBookHeader">
-              <span class="mainBookTitle"></span>,
-              <span class="mainBookYear"></span>
+            <div class="mainBookContainer">
+              <div class="mainBookHeader">
+                <span class="mainBookTitle"></span>,
+                <span class="mainBookYear"></span>
+              </div>
+              <div>de <span class="mainBookAuthor"></span></div>
+
+              <a href="#" class="mainBookReadButton">Ler</a>
             </div>
-            <div>de <span class="mainBookAuthor"></span></div>
           </div>
         </div>
       </section>
@@ -78,11 +82,13 @@
       const mainBookTitle = document.querySelector(".mainBookTitle");
       const mainBookAuthor = document.querySelector(".mainBookAuthor");
       const mainBookYear = document.querySelector(".mainBookYear");
+      const mainBookReadButton = document.querySelector(".mainBookReadButton");
 
       mainBookImg.src = books.main.cover;
-      mainBookTitle.textContent=books.main.title;
-      mainBookAuthor.textContent=books.main.author;
-      mainBookYear.textContent=books.main.year;
+      mainBookTitle.textContent = books.main.title;
+      mainBookAuthor.textContent = books.main.author;
+      mainBookYear.textContent = books.main.year;
+      mainBookReadButton.href = books.main.link;
     }
 
     insertMainBook();
