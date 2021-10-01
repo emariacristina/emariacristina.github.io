@@ -77,3 +77,30 @@
 .mainBookReadButton:active {
   background: var(--royal-purple);
 }
+
+.moreBooks {
+  display: flex;
+  flex-direction: row;
+
+  overflow-x: auto;
+
+  justify-content: space-between;
+}
+
+.moreBooks div {
+  display: flex;
+  flex-direction: column;
+
+  width: 12.8rem;
+  margin: 0 0 0 1.2rem;
+}
+
+.moreBooks img {
+  width: 11.125rem;
+  height: 16rem;
+}
+
+.moreBooks span {
+  width: 12.8rem;
+  margin: 0 0 1.2rem 0;
+}

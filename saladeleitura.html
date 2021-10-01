@@ -63,16 +63,41 @@
             </div>
           </div>
         </div>
+
+        <section class="moreBooks">
+        </section>
       </section>
     </div>
   </div>
 
   <script>
-    var books;
+    var dataBooks;
 
     async function getBooks() {
       const response = await fetch("books.json");
-      books = await response.json();
+      dataBooks = await response.json();
+    }
+
+    function createBookElement(book) {
+      const bookContainer = document.createElement('div');
+      const bookImage =  document.createElement('img');
+      const bookTitle = document.createElement('span');
+
+      bookImage.src = book.cover;
+      bookTitle.textContent = book.title;
+
+      bookContainer.appendChild(bookImage);
+      bookContainer.appendChild(bookTitle);
+
+      return bookContainer;
+    }
+
+    function insertBooks() {
+      const moreBooksSection = document.querySelector(".moreBooks");
+
+      for (const book of dataBooks.books) {
+        moreBooksSection.appendChild(createBookElement(book));
+      }
     }
 
     async function insertMainBook() {
@@ -84,11 +109,13 @@
       const mainBookYear = document.querySelector(".mainBookYear");
       const mainBookReadButton = document.querySelector(".mainBookReadButton");
 
-      mainBookImg.src = books.main.cover;
-      mainBookTitle.textContent = books.main.title;
-      mainBookAuthor.textContent = books.main.author;
-      mainBookYear.textContent = books.main.year;
-      mainBookReadButton.href = books.main.link;
+      mainBookImg.src = dataBooks.main.cover;
+      mainBookTitle.textContent = dataBooks.main.title;
+      mainBookAuthor.textContent = dataBooks.main.author;
+      mainBookYear.textContent = dataBooks.main.year;
+      mainBookReadButton.href = dataBooks.main.link;
+
+      insertBooks();
     }
 
     insertMainBook();
