@@ -12,3 +12,36 @@
 .sectionBooksHeader h2 {
   font-family: Lora;
 }
+
+.mainBook {
+  display: flex;
+  flex-direction: row;
+}
+
+.mainBook img {
+  width: 15.5rem;
+  height: 21.33rem;
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 2.4rem;
+  margin-left: 1.6rem;
+}
+
+.mainBookHeader {
+  margin: 0 0 .6rem 0;
+}
+
+.mainBookTitle {
+  font-family: Lora;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.mainBookAuthor {
+  font-size: 1.68rem;
+  font-weight: 500;
+}

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Roboto:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Roboto:wght@300;400;500;600&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="saladeleitura.css">
@@ -47,8 +47,45 @@
           </span>
           <h2>Livros</h2>
         </div>
+
+        <div class="mainBook">
+          <img src="" alt="capa do livro em destaque">
+
+          <div class="mainInfo">
+            <div class="mainBookHeader">
+              <span class="mainBookTitle"></span>,
+              <span class="mainBookYear"></span>
+            </div>
+            <div>de <span class="mainBookAuthor"></span></div>
+          </div>
+        </div>
       </section>
     </div>
   </div>
+
+  <script>
+    var books;
+
+    async function getBooks() {
+      const response = await fetch("books.json");
+      books = await response.json();
+    }
+
+    async function insertMainBook() {
+      await getBooks();
+
+      const mainBookImg = document.querySelector(".mainBook img");
+      const mainBookTitle = document.querySelector(".mainBookTitle");
+      const mainBookAuthor = document.querySelector(".mainBookAuthor");
+      const mainBookYear = document.querySelector(".mainBookYear");
+
+      mainBookImg.src = books.main.cover;
+      mainBookTitle.textContent=books.main.title;
+      mainBookAuthor.textContent=books.main.author;
+      mainBookYear.textContent=books.main.year;
+    }
+
+    insertMainBook();
+  </script>
 </body>
 </html>
