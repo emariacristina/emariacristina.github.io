@@ -104,3 +104,9 @@
   width: 12.8rem;
   margin: 0 0 1.2rem 0;
 }
+
+@media (min-width: 1000px) {
+  .mainBookContainer {
+    max-width: 22rem;
+  }
+}
