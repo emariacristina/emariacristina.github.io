@@ -82,12 +82,16 @@
       const bookContainer = document.createElement('div');
       const bookImage =  document.createElement('img');
       const bookTitle = document.createElement('span');
+      const bookButton = document.createElement('a');
 
       bookImage.src = book.cover;
       bookTitle.textContent = book.title;
+      bookButton.href = book.link;
+      bookButton.textContent = "Ler";
 
       bookContainer.appendChild(bookImage);
       bookContainer.appendChild(bookTitle);
+      bookContainer.appendChild(bookButton);
 
       return bookContainer;
     }

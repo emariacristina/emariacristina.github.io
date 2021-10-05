@@ -8,11 +8,11 @@
   },
   "books": [
     {
-      "cover": "https://eloquentjavascript.net/img/cover.jpg",
-      "title": "Eloquent JavaScript, Third Edition",
-      "author": "Marijn Haverbeke",
-      "year": "2018",
-      "link": "https://eloquentjavascript.net/"
+      "cover": "https://drive.google.com/uc?export=view&id=1IXxZ5GMUCgYlKCcfLkBJpQYstgXGLGEl",
+      "title": "Dom Casmurro",
+      "author": "Machado de Assis",
+      "year": "1899",
+      "link": "https://drive.google.com/file/d/1XOFe93ehzb7kB6oxvbS7WyBDPS6psIU8/view?usp=sharing"
     },
     {
       "cover": "https://eloquentjavascript.net/img/cover.jpg",

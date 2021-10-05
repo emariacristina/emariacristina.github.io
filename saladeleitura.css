@@ -105,6 +105,18 @@
   margin: 0 0 1.2rem 0;
 }
 
+.moreBooks a {
+  padding: .6rem;
+  margin: 1.2rem 0 0 0;
+
+  text-align: center;
+  text-decoration: none;
+
+  border-radius: .4rem;
+  color: white;
+  background: var(--medium-purple);
+}
+
 @media (min-width: 1000px) {
   .mainBookContainer {
     max-width: 22rem;
