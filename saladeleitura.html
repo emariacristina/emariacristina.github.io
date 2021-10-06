@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Roboto:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="saladeleitura.css">
+  <title>Sala de Leitura | Maria Cristina</title>
+</head>
+<body>
+  <header>
+    <div class="logoContainer">
+      <div class="logoContent">
+        <a href="index.html">
+          <span class="logo">Escola Estadual Maria Cristina</span>
+        </a>
+      </div>
+
+      <div class="navigationMenuContent">
+        <ul>
+          <li>
+            <a href="https://wa.me/5519989829098" target="_blank" class="whatsapp">
+              <span class="material-icons-round">whatsapp</span>
+              Chamar no WhatsApp
+            </a>
+          </li>
+          <li><a href="#biblioteca">Sala de Leitura</a></li>
+          <li><a href="#professor">Area do professor</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="mainContainer">
+    <div class="mainContent">
+      <h1 class="mainTitle">Sala de Leitura</h1>
+
+      <section class="books">
+        <div class="sectionBooksHeader">
+          <span class="material-icons-round">
+            chevron_right
+          </span>
+          <h2>Livros</h2>
+        </div>
+
+        <div class="mainBook">
+          <img src="" alt="capa do livro em destaque">
+
+          <div class="mainInfo">
+            <div class="mainBookContainer">
+              <div class="mainBookHeader">
+                <span class="mainBookTitle"></span>,
+                <span class="mainBookYear"></span>
+              </div>
+              <div>de <span class="mainBookAuthor"></span></div>
+
+              <a href="#" class="mainBookReadButton">Ler</a>
+            </div>
+          </div>
+        </div>
+
+        <section class="moreBooks">
+        </section>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    var dataBooks;
+
+    async function getBooks() {
+      const response = await fetch("books.json");
+      dataBooks = await response.json();
+    }
+
+    function createBookElement(book) {
+      const bookContainer = document.createElement('div');
+      const bookImage =  document.createElement('img');
+      const bookTitle = document.createElement('span');
+      const bookButton = document.createElement('a');
+
+      bookImage.src = book.cover;
+      bookTitle.textContent = book.title;
+      bookButton.href = book.link;
+      bookButton.textContent = "Ler";
+
+      bookContainer.appendChild(bookImage);
+      bookContainer.appendChild(bookTitle);
+      bookContainer.appendChild(bookButton);
+
+      return bookContainer;
+    }
+
+    function insertBooks() {
+      const moreBooksSection = document.querySelector(".moreBooks");
+
+      for (const book of dataBooks.books) {
+        moreBooksSection.appendChild(createBookElement(book));
+      }
+    }
+
+    async function insertMainBook() {
+      await getBooks();
+
+      const mainBookImg = document.querySelector(".mainBook img");
+      const mainBookTitle = document.querySelector(".mainBookTitle");
+      const mainBookAuthor = document.querySelector(".mainBookAuthor");
+      const mainBookYear = document.querySelector(".mainBookYear");
+      const mainBookReadButton = document.querySelector(".mainBookReadButton");
+
+      mainBookImg.src = dataBooks.main.cover;
+      mainBookTitle.textContent = dataBooks.main.title;
+      mainBookAuthor.textContent = dataBooks.main.author;
+      mainBookYear.textContent = dataBooks.main.year;
+      mainBookReadButton.href = dataBooks.main.link;
+
+      insertBooks();
+    }
+
+    insertMainBook();
+  </script>
+</body>
+</html>
