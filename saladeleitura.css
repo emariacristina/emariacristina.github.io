@@ -7,14 +7,14 @@
   margin-bottom: 1.2rem;
 }
 
-.sectionBooksHeader {
+.sectionHeader {
   display: flex;
   flex-direction: row;
 
   align-items: center;
 }
 
-.sectionBooksHeader h2 {
+.sectionHeader h2 {
   font-family: Lora;
 }
 
@@ -115,6 +115,28 @@
   border-radius: .4rem;
   color: white;
   background: var(--medium-purple);
+}
+
+.eLearningImage {
+  border-radius: 0;
+}
+
+.goToButton {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+
+  padding: .6rem 1.2rem;
+
+  align-items: center;
+  text-decoration: none;
+  background: var(--medium-purple);
+  color: white;
+  border-radius: .4rem;
+}
+
+.goToButton span {
+  margin: 0 0 0 .6rem;
 }
 
 @media (min-width: 1000px) {
