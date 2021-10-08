@@ -121,6 +121,10 @@
   margin: 0 0 4.8rem 0;
 }
 
+.eLearningContent img {
+  box-shadow: none;
+}
+
 .eLearningImage {
   border-radius: 0;
 }
