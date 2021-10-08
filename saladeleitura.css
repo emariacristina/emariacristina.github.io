@@ -117,6 +117,10 @@
   background: var(--medium-purple);
 }
 
+.eLearningContent {
+  margin: 0 0 4.8rem 0;
+}
+
 .eLearningImage {
   border-radius: 0;
 }
