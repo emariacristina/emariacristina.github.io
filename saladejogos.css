@@ -3,6 +3,19 @@
   --royal-purple: #7F54C0;
 }
 
+.sectionHeader {
+  display: flex;
+  flex-direction: row;
+
+  padding: 1.2rem 0 0 1.2rem;
+
+  align-items: center;
+}
+
+.sectionHeader h2 {
+  font-family: Lora;
+}
+
 .gameCard {
   padding: 0 0 1.2rem 0;
   margin: 0 0 2.4rem 0;
