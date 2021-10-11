@@ -1,0 +1,36 @@
+:root {
+  --medium-purple: #9774CC;
+  --royal-purple: #7F54C0;
+}
+
+.gameCard {
+  padding: 0 0 1.2rem 0;
+  margin: 0 0 2.4rem 0;
+
+  border-bottom: .2rem solid rgba(0, 0, 0, .2);
+}
+
+.gameCard:last-of-type {
+  margin: 0;
+}
+
+.gameCard h3 {
+  margin: 0 0 1.2rem 0;
+  font-size: 1.8rem;
+}
+
+.gameCard a {
+  padding: .6rem 1.2rem;
+  margin: 1.2rem 0;
+
+  color: white;
+  background: var(--medium-purple);
+  text-decoration: none;
+  cursor: default;
+
+  border-radius: .4rem;
+}
+
+.gameCard a:hover {
+  background: var(--royal-purple);
+}
