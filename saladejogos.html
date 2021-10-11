@@ -50,9 +50,39 @@
     dataGames = await response.json();
   }
 
+  function buildGameCard(game) {
+    const gameCardContainer = document.createElement("div");
+    const gameCardImage = document.createElement("img");
+    const gameCardTitle = document.createElement("h3");
+    const gameCardButton = document.createElement("a");
+
+    gameCardImage.src = "cover.png";
+    gameCardTitle.textContent = game.title;
+    gameCardButton.href = game.link;
+    gameCardButton.textContent = "Jogar";
+
+    gameCardContainer.appendChild(gameCardImage);
+    gameCardContainer.appendChild(gameCardTitle);
+    gameCardContainer.appendChild(gameCardButton);
+
+    return gameCardContainer;
+  }
+
+  function buildGamesList() {
+    const games = dataGames.jogos;
+    const mainContent = document.querySelector(".mainContent");
+
+    for (let index = 0; index < games.length; index++) {
+      const game = games[index];
+
+      const gameCard = buildGameCard(game);
+      mainContent.appendChild(gameCard);
+    }
+  }
+
   async function main() {
     await getDataGames();
-    console.log(dataGames);
+    buildGamesList();
   }
 
 
