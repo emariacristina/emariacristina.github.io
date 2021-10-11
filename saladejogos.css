@@ -34,3 +34,15 @@
 .gameCard a:hover {
   background: var(--royal-purple);
 }
+
+@media (min-width: 1000px) {
+  .mainContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.6rem;
+  }
+
+  .gameCard {
+    border: none;
+  }
+}
