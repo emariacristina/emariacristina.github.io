@@ -37,23 +37,26 @@
 
   <div class="mainContainer">
     <div class="mainContent">
-      <h1>Sobre</h1>
-      <p>A Escola Estadual Professora Maria Cristina de Souza Lôbo, foi criada em 2011 pelo Decreto 57.164 de 25 de julho de 2011, localizada à Rua Angra dos Reis, nº 130, Jardim Nova Europa, município de Hortolândia, pertencente a Diretoria de Ensino da Região de Sumaré-SP, atendendo a partir de 2021, alunos do Ensino Fundamental Anos Finais e Médio no Programa de Ensino Integral.</p>
-
-      <img class="mainContentImage" src="fachada.jpeg" alt="fachada da escola" />
-
-      <p>A construção da Proposta Pedagógica desta Unidade Escolar está em consonância com os princípios que regem a Lei de Diretrizes e Bases da Educação Nacional - LDB 9.394/96, Constituição Brasileira, BNCC, Currículo Paulista, Estatuto da Criança e do Adolescente, Parâmetros Curriculares Nacionais – PCNs, Diretrizes Curriculares Nacionais – DCNs, e Leis e Normas Educacionais do Estado de São Paulo.</p>
-      <hr/>
     </div>
 
-
-    <section id="location" class="locationContent">
-      <div class="locationTitle">Localização e Contato</div>
-      Telefone: <span>3819-1645 / 3819-1569</span><br/>
-      CEP: <span>13184-862</span><br/>
-      Rua Angra dos Reis, <span>nº 130</span><br/>
-      <span>Jardim Nova Europa,</span> Hortolândia - SP
-    </section>
   </div>
+
+  <script>
+  var dataGames;
+
+  async function getDataGames() {
+    const response = await fetch("jogos.json");
+
+    dataGames = await response.json();
+  }
+
+  async function main() {
+    await getDataGames();
+    console.log(dataGames);
+  }
+
+
+  main();
+  </script>
 </body>
 </html>
