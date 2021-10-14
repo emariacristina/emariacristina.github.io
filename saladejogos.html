@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Roboto:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="saladejogos.css">
+  <title>Maria Cristina</title>
+</head>
+<body>
+  <header>
+    <div class="logoContainer">
+      <div class="logoContent">
+        <a href="index.html">
+          <span class="logo">Escola Estadual Maria Cristina</span>
+        </a>
+      </div>
+
+      <div class="navigationMenuContent">
+        <ul>
+          <li>
+            <a href="https://wa.me/5519989829098" target="_blank" class="whatsapp">
+              <span class="material-icons-round">whatsapp</span>
+              Chamar no WhatsApp
+            </a>
+          </li>
+          <li><a href="saladeleitura.html">Sala de Leitura</a></li>
+          <li><a href="saladejogos.html">Sala de Jogos</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="mainContainer">
+    <div class="sectionHeader">
+      <span class="material-icons-round">
+        chevron_right
+      </span>
+      <h2>Jogos</h2>
+    </div>
+
+    <div class="mainContent">
+    </div>
+
+  </div>
+
+  <script>
+  var dataGames;
+
+  async function getDataGames() {
+    const response = await fetch("jogos.json");
+
+    dataGames = await response.json();
+  }
+
+  function buildGameCard(game) {
+    const gameCardContainer = document.createElement("div");
+    const gameCardImage = document.createElement("img");
+    const gameCardTitle = document.createElement("h3");
+    const gameCardButton = document.createElement("a");
+
+    gameCardImage.src = game.cover;
+    gameCardTitle.textContent = game.title;
+    gameCardButton.href = game.link;
+    gameCardButton.textContent = "Jogar";
+
+    gameCardContainer.appendChild(gameCardImage);
+    gameCardContainer.appendChild(gameCardTitle);
+    gameCardContainer.appendChild(gameCardButton);
+    gameCardContainer.className = "gameCard";
+
+    return gameCardContainer;
+  }
+
+  function buildGamesList() {
+    const games = dataGames.jogos;
+    const mainContent = document.querySelector(".mainContent");
+
+    for (let index = 0; index < games.length; index++) {
+      const game = games[index];
+
+      const gameCard = buildGameCard(game);
+      mainContent.appendChild(gameCard);
+    }
+  }
+
+  async function main() {
+    await getDataGames();
+    buildGamesList();
+  }
+
+
+  main();
+  </script>
+</body>
+</html>
